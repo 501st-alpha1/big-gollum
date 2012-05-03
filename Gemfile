@@ -11,3 +11,18 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'vcr'
+  gem 'webmock'
+  gem 'capybara'
+  gem 'launchy'
+end
+
+group :development do
+   gem 'guard-spork'
+   gem 'guard-cucumber'
+end
