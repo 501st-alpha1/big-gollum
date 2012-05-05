@@ -2,7 +2,7 @@
 
 Create, destroy, and manage permissions to multiple gollum wiki's
 
-Right now all the app those is let you create a gollum wiki and then browse and edit it.
+Right now all the app does is let you create a gollum wiki and then browse and edit it.
 
 It is SUPER hacky and SUPER nasty. This is just a proof a concept and way outside my comfort zone with rails / sinatra.
 
