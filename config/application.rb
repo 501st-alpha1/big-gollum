@@ -55,5 +55,8 @@ module BigGollum
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    require "./lib/wiki_initializer/wiki_initializer.rb"
+    require "./lib/wiki_mounter/wiki_mounter.rb"
   end
 end
