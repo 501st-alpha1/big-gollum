@@ -1,3 +1,22 @@
 == Big Gollum
 
 Create, destroy, and manage permissions to multiple gollum wiki's
+
+Right now all the app those is let you create a gollum wiki and then browse and edit it.
+
+It is SUPER hacky and SUPER nasty. This is just a proof a concept and way outside my comfort zone with rails / sinatra.
+
+== Intended Use Case
+
+    I run a web development business, and have various custom apps deployed now. My clients need to have a place where I can write some documentation about their app/site. A wiki is ideal because then the client can colaborate as well, and can write down things that he/she wants to remember.
+
+    So I want to be able to quickly create a wiki and invite others people to manage/view it.
+
+
+== How does it work?
+
+    There is a route that mounts a small rack app I made called WikiMounter.
+
+    WikiMounter delegates its call to Precious (The gollum front end) but sets some path variables so the links still work.
+
+    It currently intensely monkey patches gollum wiki in various ways. I dont really understand sinatra very well, so the work arounds I came up with are probably really weird.

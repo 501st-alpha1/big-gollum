@@ -1,0 +1,9 @@
+<%= link_to "Add Wiki", new_wiki_path %>
+<ul>
+<% @wikis.all.each do |wiki| %>
+  <li id="wiki-<%= wiki %>">
+    <%= link_to wiki, mounted_wiki_path(wiki.name) %>
+    <%= link_to "delete", wiki_path(wiki), :method => :delete %>
+  </li>
+<% end %>
+</ul>
