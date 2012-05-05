@@ -11,7 +11,7 @@ Feature: Users can create gollum wikis and browse them at their mountpoints
         And I go to the list of wikis
         And I delete the "apple" wiki
         Then I should not see "apple"
-        And the wiki should not have a folder anymore
+        And the "apple" wiki should not have a folder anymore
 
 
 

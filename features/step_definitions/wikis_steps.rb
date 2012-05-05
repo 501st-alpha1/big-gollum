@@ -33,6 +33,6 @@ Then /^I should not see "([^"]*)"$/ do |text|
   page.should_not have_content text
 end
 
-Then /^the wiki should not have a folder anymore$/ do
-  pending
+Then /^the "([^"]*)" wiki should not have a folder anymore$/ do |wiki_name|
+  File.exists?(Rails.root.to_s + '/wikis/' + wiki_name).should_not == true
 end
