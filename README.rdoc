@@ -8,15 +8,20 @@ It is SUPER hacky and SUPER nasty. This is just a proof a concept and way outsid
 
 == Intended Use Case
 
-    I run a web development business, and have various custom apps deployed now. My clients need to have a place where I can write some documentation about their app/site. A wiki is ideal because then the client can colaborate as well, and can write down things that he/she wants to remember.
+I run a web development business, and have various custom apps deployed now. My clients need to have a place where I can write some documentation about their app/site. A wiki is ideal because then the client can colaborate as well, and can write down things that he/she wants to remember.
 
-    So I want to be able to quickly create a wiki and invite others people to manage/view it.
+So I want to be able to quickly create a wiki and invite others people to manage/view it.
 
 
 == How does it work?
 
-    There is a route that mounts a small rack app I made called WikiMounter.
+There is a route that mounts a small rack app I made called WikiMounter.
 
-    WikiMounter delegates its call to Precious (The gollum front end) but sets some path variables so the links still work.
+WikiMounter delegates its call to Precious (The gollum front end) but sets some path variables so the links still work.
 
-    It currently intensely monkey patches gollum wiki in various ways. I dont really understand sinatra very well, so the work arounds I came up with are probably really weird.
+It currently intensely monkey patches gollum wiki in various ways. I dont really understand sinatra very well, so the work arounds I came up with are probably really weird.
+
+== How to start it?
+
+You should be able to just "rails s"
+You can then click on add wiki, give it a name (No spaces or weird characters) and then you will be able to click on your wiki and browse/edit it.
