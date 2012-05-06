@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="alert-container">
+    <% flash.each do |key, msg| %>
+      <% if ! msg.empty? %>
+      <div data-alert class="alert alert-<%= key %>">
+      <%= msg %>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
 
-<%= yield %>
-
+  <%= yield %>
 </body>
 </html>

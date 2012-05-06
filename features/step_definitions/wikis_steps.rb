@@ -10,6 +10,11 @@ Then /^I should see "([^"]*)" in the list of wikis$/ do |wiki_name|
   page.should have_content(wiki_name)
 end
 
+Then /^I should not see "([^"]*)" in the list of wikis$/ do |wiki_name|
+  visit root_path
+  page.should_not have_content(wiki_name)
+end
+
 When /^when I go to the "([^"]*)" wiki$/ do |wiki_name|
   visit root_path
   click_on wiki_name
@@ -34,5 +39,9 @@ Then /^I should not see "([^"]*)"$/ do |text|
 end
 
 Then /^the "([^"]*)" wiki should not have a folder anymore$/ do |wiki_name|
+  File.exists?(Rails.root.to_s + '/wikis/' + wiki_name).should_not == true
+end
+
+Then /^the "([^"]*)" wiki should not exist$/ do |wiki_name|
   File.exists?(Rails.root.to_s + '/wikis/' + wiki_name).should_not == true
 end
