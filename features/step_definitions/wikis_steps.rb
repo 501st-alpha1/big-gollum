@@ -41,7 +41,3 @@ end
 Then /^the "([^"]*)" wiki should not have a folder anymore$/ do |wiki_name|
   File.exists?(Rails.root.to_s + '/wikis/' + wiki_name).should_not == true
 end
-
-Then /^the "([^"]*)" wiki should not exist$/ do |wiki_name|
-  File.exists?(Rails.root.to_s + '/wikis/' + wiki_name).should_not == true
-end
