@@ -114,8 +114,11 @@ $(document).ready(function() {
                               var n = 'New Page';
                               if ( res['name'] )
                                 var n = res['name'];
+                              var m = res["mount_point"];
+                              console.log(m);
+                              console.log ('hi');
                               n = encodeURIComponent( n );
-                              window.location = '/' + n;
+                              window.location = m + '/' + n;
                             }
                           });
     });

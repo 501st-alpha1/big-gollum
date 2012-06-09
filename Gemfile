@@ -4,8 +4,17 @@ gem 'rails', '3.2.3'
 
 gem 'sqlite3'
 gem 'inherited_resources'
-gem 'gollum', :git => "git@github.com:oponder/gollum.git"
-gem 'nokogiri'
+gem 'devise'
+gem 'grit', "~> 2.4.1"
+gem 'github-markup', "< 1.0.0"
+gem 'github-markdown'
+gem 'pygments.rb', "~> 0.2.0"
+gem 'posix-spawn', "~> 0.3.0"
+gem 'sinatra', "~> 1.0"
+gem 'mustache', "< 1.0.0"
+gem 'sanitize', "~> 2.0.0"
+gem 'nokogiri', "~> 1.4"
+gem "twitter-bootstrap-rails"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

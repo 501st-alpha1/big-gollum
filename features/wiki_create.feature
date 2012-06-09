@@ -1,8 +1,11 @@
 Feature: Users can create gollum wikis and browse them at their mountpoints
+    Background:
+        Given I am logged in as a user
 
     Scenario: User creates a wiki
         When I create a wiki called "apple"
         Then I should see "apple" in the list of wikis
+        And I should be a member of the "apple" wiki
         When when I go to the "apple" wiki
         Then I should see "Apple Wiki"
 

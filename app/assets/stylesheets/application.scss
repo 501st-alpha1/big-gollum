@@ -1,0 +1,124 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+*/
+
+body {
+  font-family: "nimbus-sans";
+  background-color: #EFEBE3;
+  background: url("/assets/wood.jpg");
+}
+
+#new_wiki_link {
+  text-align: center;
+  display: block;
+  width: 70px;
+  position: relative;
+  left: 30px;
+  color: #fff;
+
+  #new_wiki_icon{
+    width: 70px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+    margin-bottom: 5px;
+
+    text-rendering: optimizeLegibility;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    i {
+      font-size: 30px;
+      color: #98BE89;
+    }
+  }
+}
+
+#wikis{
+
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+
+  li {
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+  }
+
+  a {
+    color: #111;
+  }
+
+  a:hover{
+    text-decoration: none;
+  }
+
+  .wiki{
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    display: block;
+    padding: 14px;
+
+    text-rendering: optimizeLegibility;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    p {
+      color: #AA9C95;
+      font-size: 16px;
+    }
+
+  }
+}
+
+.user{
+  width: 40px;
+  height: 40px;
+  position: relative;
+
+  img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.delete_wiki {
+  // display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  i {
+    width: auto;
+    color: #ccc;
+  }
+}
+
+
+  .delete_wiki:hover {
+    i {
+      color: #777 !important
+    }
+  }

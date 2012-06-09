@@ -1,6 +1,7 @@
 class WikisController < InheritedResources::Base
   def create
     @wiki = Wiki.new(params[:wiki])
+    @wiki.add_member(current_user)
     create! do |success, failure|
       success.html {
         WikiInitializer.create_wiki(@wiki)

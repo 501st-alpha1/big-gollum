@@ -12,8 +12,11 @@ class WikiMounter
     load Rails.root + 'lib/gollum/lib/gollum/frontend/app.rb'
     Precious::App.set(:gollum_path, wiki_path)
     Precious::App.set(:wiki_options, {})
-
-    Precious::App.call(env)
+    if env['warden'].user && env['warden'].user.wikis.include?(Wiki.find_by_name(wiki_name))
+      Precious::App.call(env)
+    else
+      [404, {}, []]
+    end
   end
 
   def self.mount_point

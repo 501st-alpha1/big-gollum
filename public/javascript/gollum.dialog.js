@@ -126,7 +126,7 @@
       $('#gollum-dialog-dialog-body input').each(function() {
         results[$(this).attr('name')] = $(this).val();
       });
-
+        results["mount_point"] = $('#mount_point').html();
       // pass them to evtOK if it exists (which it should)
       if ( evtOK &&
            typeof evtOK == 'function' ) {

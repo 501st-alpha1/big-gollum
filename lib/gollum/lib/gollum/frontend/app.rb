@@ -1,10 +1,10 @@
 require 'cgi'
 require 'sinatra'
-require 'gollum'
+require  Rails.root + 'lib/gollum/lib/gollum'
 require 'mustache/sinatra'
 
-require 'gollum/frontend/views/layout'
-require 'gollum/frontend/views/editable'
+require Rails.root + 'lib/gollum/lib/gollum/frontend/views/layout'
+require Rails.root + 'lib/gollum/lib/gollum/frontend/views/editable'
 
 module Precious
   class App < Sinatra::Base
