@@ -1,0 +1,22 @@
+<div id="login_form">
+  <h1>Ponder Design Wikis</h1>
+
+  <em>Log in to access your wikis</em>
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <%= f.email_field :email %>
+    <%= f.password_field :password %>
+    <button class="btn primary" type="submit">Log in</button>
+    <br/>
+    <%= f.check_box :remember_me, :class => 'check_box' %> Keep me logged in.
+  <% end %>
+
+  <div class="features">
+    <h3>Share information effortlessly</h3>
+    <ul>
+      <li>Create wikis and invite people to help you manage it. [in-progress]</li>
+      <li>Make your wikis public or private, and control who gets to edit. [in-progress]</li>
+      <li>Easily export your entire wiki. [in-progress]</li>
+    </ul>
+  </div>
+</div>
+

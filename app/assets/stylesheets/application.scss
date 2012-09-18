@@ -15,7 +15,7 @@
 body {
   font-family: "nimbus-sans";
   background-color: #EFEBE3;
-  background: url("/assets/wood.jpg");
+  background: url("/assets/7.jpg");
 }
 
 #new_wiki_link {
@@ -49,8 +49,8 @@ body {
   }
 }
 
-#wikis{
-
+#wikis {
+  position: relative;
   list-style-type: none;
   margin: 0px;
   padding: 0px;
@@ -93,6 +93,10 @@ body {
   }
 }
 
+.navbar {
+  margin-bottom: 0px;
+}
+
 .user{
   width: 40px;
   height: 40px;
@@ -116,9 +120,90 @@ body {
   }
 }
 
+.delete_wiki:hover {
+  i {
+    color: #777 !important
+  }
+}
 
-  .delete_wiki:hover {
-    i {
-      color: #777 !important
+#wiki_create_dialogue {
+  width: 680px;
+  height: 380px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -180px;
+  margin-left: -320px;
+  display: none;
+
+  text-rendering: optimizeLegibility;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 6px rgba(0,0,0,0.3);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.span12{
+  position: relative;
+}
+  
+#login_form {
+  width: 600px;
+  right: 0px;
+  margin-top: 60px;
+  position: absolute;
+  color: #f3e4d1;
+  
+  form {
+    margin-bottom: 65px;  
+  }
+  
+  em{
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    color: #ecd4b6;
+    margin-top: 8px;
+    li {
+      margin-bottom: 8px;
     }
   }
+  
+  h1 {
+    text-shadow: 0px 2px 3px #666;
+    margin-bottom: 65px;  
+    font-family: "raleway";
+    font-weight: 100;
+    font-size: 40px;
+    font-style: normal;
+    color: #f3e4d1;
+  }
+  
+  h3 {
+    font-weight: 300;
+  }
+  
+  label {
+    display: inline;
+    font-weight: normal;    
+  }
+  
+  input {
+    display: inline;
+  }
+  
+  button {
+    top: -4px;
+    position: relative;
+    width: 75px;
+  }
+}

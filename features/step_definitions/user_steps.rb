@@ -6,5 +6,5 @@ Given /^I am logged in as a user$/ do
   visit new_user_session_path
   fill_in "user_email", :with => user.email
   fill_in "user_password", :with => "12345678"
-  click_on "Sign in"
+  click_on "Log in"
 end
