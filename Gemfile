@@ -13,7 +13,7 @@ gem 'posix-spawn', "~> 0.3.0"
 gem 'sinatra', "~> 1.0"
 gem 'mustache', "< 1.0.0"
 gem 'sanitize', "~> 2.0.0"
-gem 'nokogiri', "~> 1.4"
+gem 'nokogiri'
 gem "twitter-bootstrap-rails"
 
 group :assets do
