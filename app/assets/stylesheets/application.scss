@@ -120,6 +120,15 @@ body {
   }
 }
 
+.edit_wiki_button {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  i {
+    width: auto;
+  }
+}
+
 .delete_wiki:hover {
   i {
     color: #777 !important
