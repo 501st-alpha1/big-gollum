@@ -16,6 +16,10 @@ class WikisController < InheritedResources::Base
     end
   end
 
+  def edit
+    @wiki = Wiki.find(params[:id])
+  end
+
   def destroy
     @wiki = Wiki.find(params[:id])
     `rm -rf "#{Rails.root.to_s + '/wikis/' + @wiki.name}"`
