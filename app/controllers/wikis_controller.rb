@@ -22,8 +22,14 @@ class WikisController < InheritedResources::Base
 
   def update
     @wiki = Wiki.find(params[:id])
+    old_name = @wiki.name
     @wiki.name = params[:wiki][:name]
     @wiki.save
+
+    old_path = Rails.root.join('wikis', old_name)
+    new_path = Rails.root.join('wikis', @wiki.name)
+
+    `mv "#{old_path}" "#{new_path}"`
 
     redirect_to root_url and return
   end
