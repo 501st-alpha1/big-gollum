@@ -24,14 +24,17 @@ class WikisController < InheritedResources::Base
     @wiki = Wiki.find(params[:id])
     old_name = @wiki.name
     @wiki.name = params[:wiki][:name]
-    @wiki.save
+    if @wiki.save
+      old_path = Rails.root.join('wikis', old_name)
+      new_path = Rails.root.join('wikis', @wiki.name)
 
-    old_path = Rails.root.join('wikis', old_name)
-    new_path = Rails.root.join('wikis', @wiki.name)
+      `mv "#{old_path}" "#{new_path}"`
 
-    `mv "#{old_path}" "#{new_path}"`
-
-    redirect_to root_url and return
+      redirect_to root_url and return
+    else
+      flash[:error] = "Could not rename wiki."
+      render :edit
+    end
   end
 
   def destroy
