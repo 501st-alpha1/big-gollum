@@ -30,6 +30,7 @@ class WikisController < InheritedResources::Base
 
       `mv "#{old_path}" "#{new_path}"`
 
+      flash[:notice] = "Wiki was successfully renamed."
       redirect_to root_url and return
     else
       flash[:error] = "Could not rename wiki."
