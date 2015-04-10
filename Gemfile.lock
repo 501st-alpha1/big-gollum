@@ -83,6 +83,7 @@ GEM
     minitest (5.5.1)
     multi_json (1.11.0)
     mustache (1.0.1)
+    mustache-sinatra (1.0.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     nokogumbo (1.2.0)
@@ -184,6 +185,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mustache
+  mustache-sinatra
   nokogiri
   posix-spawn
   pygments.rb

@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module BigGollum
   class Application < Rails::Application
+    require Rails.root.join('lib', 'wiki_initializer', 'wiki_initializer')
+    require Rails.root.join('lib', 'wiki_mounter', 'wiki_mounter')
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -22,5 +24,6 @@ module BigGollum
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
   end
 end

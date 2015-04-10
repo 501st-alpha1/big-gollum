@@ -31,6 +31,7 @@ gem 'pygments.rb'
 gem 'posix-spawn'
 gem 'sinatra'
 gem 'mustache'
+gem 'mustache-sinatra'
 gem 'sanitize'
 gem 'nokogiri'
 gem "twitter-bootstrap-rails"

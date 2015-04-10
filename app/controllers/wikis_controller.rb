@@ -3,22 +3,21 @@ class WikisController < ApplicationController
     @wikis = Wiki
   end
 
+  def new
+    @wiki = Wiki.new
+  end
+
   def create
-    @wiki = Wiki.new(params[:wiki])
+    @wiki = Wiki.new(params[:wiki].permit(:name))
 
-    @wiki.add_member(current_user)
-
-    create! do |success, failure|
-      success.html {
-        WikiInitializer.create_wiki(@wiki)
-        flash[:notice] = "Dude! Nice job creating that wiki."
-        redirect_to root_url
-      }
-
-      failure.html {
-        flash[:notice] = "Could not create wiki."
-        render :new
-      }
+    if @wiki.save!
+      @wiki.add_member(current_user)
+      WikiInitializer.create_wiki(@wiki)
+      flash[:notice] = "Dude! Nice job creating that wiki."
+      redirect_to root_url
+    else
+      flash.now[:notice] = "Could not create wiki."
+      render :new
     end
   end
 
