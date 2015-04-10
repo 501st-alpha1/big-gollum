@@ -2,8 +2,6 @@ class Wiki < ActiveRecord::Base
 
   has_and_belongs_to_many :users
 
-  attr_accessible :name
-
   validates_format_of :name, :with => /\A(\w|-|_)*\Z/
   validates_uniqueness_of :name
 

@@ -15,7 +15,8 @@
 body {
   font-family: "nimbus-sans";
   background-color: #EFEBE3;
-  background: url("/assets/7.jpg");
+
+  background-color: #000
 }
 
 #new_wiki_link {
@@ -158,25 +159,25 @@ body {
 .span12{
   position: relative;
 }
-  
+
 #login_form {
   width: 600px;
   right: 0px;
   margin-top: 60px;
   position: absolute;
   color: #f3e4d1;
-  
+
   form {
-    margin-bottom: 65px;  
+    margin-bottom: 65px;
   }
-  
+
   em{
     font-style: normal;
     font-weight: normal;
     margin-bottom: 5px;
     display: block;
   }
-  
+
   ul {
     list-style-type: none;
     margin: 0px;
@@ -186,30 +187,30 @@ body {
       margin-bottom: 8px;
     }
   }
-  
+
   h1 {
     text-shadow: 0px 2px 3px #666;
-    margin-bottom: 65px;  
+    margin-bottom: 65px;
     font-family: "raleway";
     font-weight: 100;
     font-size: 40px;
     font-style: normal;
     color: #f3e4d1;
   }
-  
+
   h3 {
     font-weight: 300;
   }
-  
+
   label {
     display: inline;
-    font-weight: normal;    
+    font-weight: normal;
   }
-  
+
   input {
     display: inline;
   }
-  
+
   button {
     top: -4px;
     position: relative;

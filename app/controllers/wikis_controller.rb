@@ -1,7 +1,13 @@
-class WikisController < InheritedResources::Base
+class WikisController < ApplicationController
+  def index
+    @wikis = Wiki
+  end
+
   def create
     @wiki = Wiki.new(params[:wiki])
+
     @wiki.add_member(current_user)
+
     create! do |success, failure|
       success.html {
         WikiInitializer.create_wiki(@wiki)
@@ -22,8 +28,11 @@ class WikisController < InheritedResources::Base
 
   def update
     @wiki = Wiki.find(params[:id])
+
     old_name = @wiki.name
+
     @wiki.name = params[:wiki][:name]
+
     if @wiki.save
       old_path = Rails.root.join('wikis', old_name)
       new_path = Rails.root.join('wikis', @wiki.name)
