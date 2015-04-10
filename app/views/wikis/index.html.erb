@@ -23,6 +23,7 @@
             <% end %>
           <% end %>
           <%= link_to '<i class="icon-trash">&nbsp;&nbsp;Delete</i>'.html_safe, wiki_path(wiki), :method => "delete", :confirm => "Are you sure? There is no undo!", :class => "delete_wiki", :id => "delete_wiki-#{wiki.name}" %>
+          <%= link_to '<i class="icon-pencil">&nbsp;&nbsp;Edit</i>'.html_safe, edit_wiki_path(wiki), :class => "edit_wiki_button", :id => "edit_wiki-#{wiki.name}" %>
         </li>
     <% end %>
     </ul>

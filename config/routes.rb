@@ -5,5 +5,5 @@ BigGollum::Application.routes.draw do
 
   match "/wiki/:wiki(/*other)", :to => WikiMounter, :anchor => true, :as => "mounted_wiki"
 
-  resources :wikis, :only => [:index, :create, :new, :destroy]
+  resources :wikis, :only => [:index, :create, :new, :edit, :update, :destroy]
 end
