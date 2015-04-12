@@ -22,6 +22,12 @@
           %span.icon-bar
         %a.navbar-brand(href="#") Big Gollum
         .navbar-collapse.collapse.navbar-responsive-collapse
+          - if user_signed_in?
+            %ul.nav.navbar-nav.navbar-right
+              %li
+                %a= current_user.email if current_user
+              %li
+                = link_to('Logout', destroy_user_session_path, method: :delete)
 
 
     .container
