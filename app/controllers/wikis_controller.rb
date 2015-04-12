@@ -49,6 +49,7 @@ class WikisController < ApplicationController
   def destroy
     @wiki = Wiki.find(params[:id])
     `rm -rf "#{Rails.root.to_s + '/wikis/' + @wiki.name}"`
-    destroy!(:notice => "Wiki has been destroyed :(") { root_url }
+    @wiki.destroy
+    redirect_to root_url, notice:  "Wiki has been destroyed!"
   end
 end
