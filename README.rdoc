@@ -21,6 +21,11 @@ WikiMounter delegates its call to Precious (The gollum front end) but sets some 
 
 It currently intensely monkey patches gollum wiki in various ways. I dont really understand sinatra very well, so the work arounds I came up with are probably really weird.
 
+== Dependencies
+
+  icu4c - charlock_holmes
+  brew install icu4c or apt-get install libicu-dev
+
 == How to start it?
 
     bundle install

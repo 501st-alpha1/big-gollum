@@ -1,0 +1,19 @@
+.row
+  .col-md-2
+    = link_to new_wiki_path, id: "new_wiki_link" do
+      #new_wiki_icon
+        %i.fa.fa-plus
+      New Wiki
+  .col-md-10
+    %ul#wikis
+      - @wikis.all.each do |wiki|
+        %li
+          = link_to(mounted_wiki_path(wiki: wiki.name), class: "wiki", id: "wiki-%{wiki}" ) do
+            %h3= wiki.name
+            %p A description of this wiki
+            - wiki.users.each do |user |
+              .user{id: "user-#{user.id}"}
+                = image_tag(gravatar_url_for(user.email), { width: 40, height: 40 })
+                = image_tag("user-circle-overlay.png")
+          = link_to '<i class="icon-trash">  Delete</i>'.html_safe, wiki_path(wiki), method: "delete", confirm: "Are you sure? There is no undo!", class: "delete_wiki", id: "delete_wiki-#{wiki.name}"
+          = link_to '<i class="icon-pencil">  Edit</i>'.html_safe, edit_wiki_path(wiki), class: "edit_wiki_button", id: "edit_wiki-#{wiki.name}"
