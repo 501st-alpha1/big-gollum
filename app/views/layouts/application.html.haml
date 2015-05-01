@@ -20,7 +20,7 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        %a.navbar-brand(href="#") Big Gollum
+        %a.navbar-brand(href="/")= Setting.value_for('application_name')
         .navbar-collapse.collapse.navbar-responsive-collapse
           - if user_signed_in?
             %ul.nav.navbar-nav.navbar-right
@@ -28,6 +28,10 @@
                 %a
                   Welcome
                   = current_user.email
+
+              %li
+                = link_to "Settings", settings_path
+
               %li
                 = link_to('Logout', destroy_user_session_path, method: :delete)
 

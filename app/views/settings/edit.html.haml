@@ -1,0 +1,7 @@
+= form_for :settings, method: :put, url: settings_path do |f|
+  - @settings.each do |setting|
+    = f.fields_for setting.key, setting do |ff|
+      = ff.label :value, setting.key
+      = ff.text_field :value
+
+  = f.submit "Save settings"

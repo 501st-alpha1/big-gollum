@@ -10,5 +10,6 @@ BigGollum::Application.routes.draw do
     root to: 'wikis#index'
     match "/wiki/:wiki(/*other)", to: WikiMounter, anchor: true, as: "mounted_wiki", via: [:get, :post]
     resources :wikis, :only => [:index, :create, :new, :edit, :update, :destroy]
+    resource :settings, only: [:show, :edit, :update]
   end
 end

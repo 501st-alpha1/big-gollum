@@ -1,0 +1,7 @@
+%dl
+  - @settings.each do |setting|
+    %dt= setting.key
+    %dd= setting.value
+
+
+= link_to "Edit settings", edit_settings_path, class: "btn btn-primary"

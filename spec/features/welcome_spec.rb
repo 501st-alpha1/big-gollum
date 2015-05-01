@@ -13,7 +13,6 @@ feature "Welcome new users and setting up the application" do
   end
 
   context "Given no admin user" do
-
     scenario "When a user visits the root path" do
       visit "/"
 
@@ -29,6 +28,14 @@ feature "Welcome new users and setting up the application" do
       click_button "Create account"
 
       expect(page).to have_text("Welcome first-user@example.com")
+
+
+      fill_in 'settings[application_name][value]', with: 'My first Wiki collection'
+      click_on 'Save settings'
+
+      expect(page).to have_text "My first Wiki collection"
     end
+
+
   end
 end

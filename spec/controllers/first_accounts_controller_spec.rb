@@ -14,6 +14,6 @@ describe FirstAccountsController do
       expect { subject }.to change { User.count }.by(1)
     end
 
-    it { is_expected.to redirect_to(root_path) }
+    it { is_expected.to redirect_to(edit_settings_path) }
   end
 end

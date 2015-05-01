@@ -10,7 +10,7 @@ class WikisController < ApplicationController
   def create
     @wiki = Wiki.new(params[:wiki].permit(:name))
 
-    if @wiki.save!
+    if @wiki.save
       @wiki.add_member(current_user)
       WikiInitializer.create_wiki(@wiki)
       flash[:notice] = "Dude! Nice job creating that wiki."

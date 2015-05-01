@@ -40,5 +40,15 @@ RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
   config.include Devise::TestHelpers, type: :controller
+
+  config.include Warden::Test::Helpers
+
+  config.before :suite do
+    Warden.test_mode!
+  end
+
+  config.after do
+    Warden.test_reset!
+  end
 end
 

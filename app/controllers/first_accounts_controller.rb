@@ -10,7 +10,7 @@ class FirstAccountsController < ApplicationController
 
     if @first_account.save
       sign_in :user, @first_account
-      redirect_to root_path
+      redirect_to edit_settings_path
     else
       render :new
     end
