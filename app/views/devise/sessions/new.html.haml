@@ -1,0 +1,24 @@
+#login_form
+  %h1 Wikis
+  - if User.count == 0
+    %p Please create your account
+
+  - else
+    %em Log in to access your wikis
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      = f.email_field :email
+      = f.password_field :password
+      %button.btn.primary{:type => "submit"} Log in
+      %br/
+      = f.check_box :remember_me, :class => 'check_box'
+      Keep me logged in.
+
+
+
+
+  .features
+    %h3 Share information effortlessly
+    %ul
+      %li Create wikis and invite people to help you manage it.
+      %li Make your wikis public or private, and control who gets to edit.
+      %li Easily export your entire wiki.

@@ -25,7 +25,9 @@
           - if user_signed_in?
             %ul.nav.navbar-nav.navbar-right
               %li
-                %a= current_user.email if current_user
+                %a
+                  Welcome
+                  = current_user.email
               %li
                 = link_to('Logout', destroy_user_session_path, method: :delete)
 

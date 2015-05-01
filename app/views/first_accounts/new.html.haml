@@ -1,0 +1,16 @@
+%h1 Please create your account
+
+= form_for @first_account, url: first_account_path do |f|
+  .form_group
+    = f.label :email
+    = f.text_field :email
+
+  .form_group
+    = f.label :password
+    = f.password_field :password
+
+  .form_group
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation
+
+  = f.submit "Create account", class: "btn btn-primary"
