@@ -28,3 +28,7 @@ It currently intensely monkey patches gollum wiki in various ways. I dont really
     rails s
 
 You can then click on add wiki, give it a name (No spaces or weird characters) and then you will be able to click on your wiki and browse/edit it.
+
+== License
+
+MIT License.
