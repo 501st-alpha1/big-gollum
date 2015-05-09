@@ -10,6 +10,7 @@
  *
  *= require bootstrap.min
  *= require font-awesome.min
+ *= require rails_bootstrap_forms
  *= require_self
 
 */
@@ -20,4 +21,20 @@
     display: block;
   }
 
+}
+
+.login_form {
+  max-width: 300px;
+  border-radius: 5px;
+  background-color: #F8F8F8;
+  border: 1px solid #E7E7E7;
+  padding: 20px;
+  margin: auto;
+
+  h1 {
+    font-size: 18px;
+    border-bottom: 1px solid #E7E7E7;
+    padding: 0px 20px 15px;
+    margin: 0px -20px 20px;
+  }
 }
