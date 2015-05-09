@@ -1,4 +1,4 @@
-%h1 Please create your account
+%h1= t(".please_create_an_account")
 
 = form_for @first_account, url: first_account_path do |f|
   .form_group
@@ -13,4 +13,4 @@
     = f.label :password_confirmation
     = f.password_field :password_confirmation
 
-  = f.submit "Create account", class: "btn btn-primary"
+  = f.submit t(".create_an_account"), class: "btn btn-primary"

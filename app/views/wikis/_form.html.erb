@@ -1,6 +1,5 @@
 <%= form_for @wiki do |f| %>
-  <p>Note that you probably don't want the name to include the word "wiki",
-    unless you want the default title page to be "Whatever Wiki Wiki."</p>
+  <p><%= t(".form_note") %></p>
   <%= f.text_field :name %>
   <%= f.submit %>
 <% end %>

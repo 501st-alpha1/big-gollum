@@ -1,14 +1,10 @@
 #login_form
-  - if User.count == 0
-    %p Please create your account
+  .login_form
+    %h1= t(".please_log_in")
 
-  - else
-    .login_form
-      %h1 Please log in
-
-      = bootstrap_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-        = f.email_field :email, autofocus: true
-        = f.password_field :password
-        %button.btn.btn-primary{type: "submit"} Log in
-        %br/
-        = f.check_box :remember_me, :class => 'check_box'
+    = bootstrap_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      = f.email_field :email, autofocus: true
+      = f.password_field :password
+      %button.btn.btn-primary{type: "submit"} Log in
+      %br/
+      = f.check_box :remember_me, :class => 'check_box'

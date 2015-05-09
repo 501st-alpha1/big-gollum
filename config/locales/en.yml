@@ -3,3 +3,38 @@
 
 en:
   hello: "Hello world"
+
+  layouts:
+    application: "Welcome"
+    settings: "Settings"
+    logout: "Logout"
+
+  devise:
+    sessions:
+      new:
+        please_log_in: Please log in
+
+  first_accounts:
+    new:
+      please_create_an_account: Please create an account
+      create_an_account: "Create account"
+
+  settings:
+    edit:
+      save_settings: "Save settings"
+
+    show:
+      edit_settings: "Edit settings"
+
+  wikis:
+    form:
+      form_note: "Note that you probably don't want the name to include the word \"wiki\", unless you want the default title page to be \"Whatever Wiki Wiki.\""
+
+    edit:
+      heading: "Edit wiki"
+
+    index:
+      new_wiki: "New wiki"
+
+    new:
+      heading: "New wiki"

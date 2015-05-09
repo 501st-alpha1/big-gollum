@@ -3,7 +3,7 @@
     = link_to new_wiki_path, id: "new_wiki_link" do
       #new_wiki_icon
         %i.fa.fa-plus
-      New Wiki
+      = t('.new_wiki')
   .col-md-10
     %ul#wikis
       - @wikis.all.each do |wiki|

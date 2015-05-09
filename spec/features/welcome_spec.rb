@@ -8,7 +8,7 @@ feature "Welcome new users and setting up the application" do
       visit "/"
 
       expect(page).to have_text("Log in")
-      expect(page).to have_no_text("Please create your account")
+      expect(page).to have_no_text("Please create an account")
     end
   end
 
@@ -17,7 +17,7 @@ feature "Welcome new users and setting up the application" do
       visit "/"
 
       expect(page).to have_no_text("Log in")
-      expect(page).to have_text("Please create your account")
+    expect(page).to have_text("Please create an account")
     end
 
     scenario "When a user creates the first account" do
