@@ -32,4 +32,3 @@ You can then click on add wiki, give it a name (No spaces or weird characters) a
 == License
 
 MIT License.
->>>>>>> 06106057d55478abb2e8006c72f586eb9bb61196
