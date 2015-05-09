@@ -20,8 +20,16 @@ WikiMounter delegates its call to Precious (The gollum front end) but configures
     rake db:migrate
     rails s
 
+
 You can then follow the start up process. When there are no user
 accounts in the database the app will ask you to create the first admin account.
 
 Once you are logged in you can click on add wiki, give it a name (No spaces or
 weird characters) and then you will be able to click on your wiki and browse/edit it.
+
+You can then click on add wiki, give it a name (No spaces or weird characters) and then you will be able to click on your wiki and browse/edit it.
+
+== License
+
+MIT License.
+>>>>>>> 06106057d55478abb2e8006c72f586eb9bb61196
