@@ -1,6 +1,12 @@
-%dl
-  - @settings.each do |setting|
-    %dt= setting.key
-    %dd= setting.value
 
-= link_to t(".edit_settings"), edit_settings_path, class: "btn btn-primary"
+.row
+  .col-md-8.col-md-offset-2
+    %h4= t('.title')
+    %table.table.table-bordered#settings
+      - @settings.each do |setting|
+        %tr
+          %td.key= setting.key
+          %td.value= setting.value
+
+    = link_to t(".edit_settings"), edit_settings_path, class: "btn btn-primary btn-sm"
+    = link_to t("back"), root_path, class: "btn btn-default btn-sm"

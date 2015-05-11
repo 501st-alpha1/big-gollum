@@ -72,3 +72,27 @@
     }
   }
 }
+
+#settings {
+  td.key {
+    font-weight: bold;
+    width: 50%;
+  }
+
+  td.key label {
+    margin: 0px
+  }
+
+  td.value {
+    height: 37px !important;
+    position: relative;
+  }
+
+  td.value input {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    border-bottom: 1px dashed #ccc;
+  }
+}

@@ -21,9 +21,11 @@ en:
 
   settings:
     edit:
+      title: "Edit Settings"
       save_settings: "Save settings"
 
     show:
+      title: "Settings"
       edit_settings: "Edit settings"
 
   wikis:

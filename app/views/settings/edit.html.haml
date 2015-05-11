@@ -1,7 +1,13 @@
-= form_for :settings, method: :put, url: settings_path do |f|
-  - @settings.each do |setting|
-    = f.fields_for setting.key, setting do |ff|
-      = ff.label :value, setting.key
-      = ff.text_field :value
+.row
+  .col-md-8.col-md-offset-2
+    %h4= t('.title')
+    = form_for :settings, method: :put, url: settings_path do |f|
+      %table.table.table-bordered#settings
+        - @settings.each do |setting|
+          %tr
+            = f.fields_for setting.key, setting do |ff|
+              %td.key= ff.label :value, setting.key
+              %td.value= ff.text_field :value
 
-  = f.submit t('.save_settings')
+      = f.submit t('.save_settings'), class: "btn btn-success btn-sm"
+      = link_to t("cancel"), settings_path, class: "btn btn-default btn-sm"
