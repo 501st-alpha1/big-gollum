@@ -5,9 +5,10 @@ en:
   hello: "Hello world"
 
   layouts:
-    application: "Welcome"
-    settings: "Settings"
-    logout: "Logout"
+    application:
+      welcome: "Welcome"
+      settings: "Settings"
+      logout: "Logout"
 
   devise:
     sessions:
