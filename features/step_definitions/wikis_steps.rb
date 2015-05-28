@@ -1,6 +1,6 @@
 When /^I create a wiki called "([^"]*)"$/ do |wiki_name|
   visit root_path
-  click_on "New Wiki"
+  click_on "New wiki"
   fill_in "wiki_name", :with => wiki_name
   click_on "Create Wiki"
   @wiki_name = wiki_name
