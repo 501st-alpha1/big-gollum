@@ -21,7 +21,7 @@ Then /^I should be a member of the "([^"]*)" wiki$/ do |wiki_name|
   expect(wiki.users.include?(User.first)).to eq(true)
 end
 
-When /^when I go to the "([^"]*)" wiki$/ do |wiki_name|
+When /^I go to the "([^"]*)" wiki$/ do |wiki_name|
   visit root_path
   click_on wiki_name
 end
