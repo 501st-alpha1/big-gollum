@@ -35,9 +35,7 @@ When /^I go to the list of wikis$/ do
 end
 
 When /^I delete the "([^"]*)" wiki$/ do |wiki_name|
-  within("#wiki-#{wiki_name}") do
-    click_on "delete_wiki-#{wiki_name}"
-  end
+  click_on "delete_wiki-#{wiki_name}"
 end
 
 Then /^I should not see "([^"]*)"$/ do |text|
