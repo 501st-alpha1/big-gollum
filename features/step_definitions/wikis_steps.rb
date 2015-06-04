@@ -21,6 +21,10 @@ Then /^I should be a member of the "([^"]*)" wiki$/ do |wiki_name|
   expect(wiki.users.include?(User.first)).to eq(true)
 end
 
+Then /^the "([^"]*)" wiki should have a folder$/ do |wiki_name|
+  expect(File.exists?(Rails.root.to_s + '/wikis/' + wiki_name)).to eq(true)
+end
+
 When /^I go to the "([^"]*)" wiki$/ do |wiki_name|
   visit root_path
   click_on wiki_name

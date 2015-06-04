@@ -6,6 +6,7 @@ Feature: Users can create gollum wikis and browse them at their mountpoints
         When I create a wiki called "apple"
         Then I should see "apple" in the list of wikis
         And I should be a member of the "apple" wiki
+        And the "apple" wiki should have a folder
         When I go to the "apple" wiki
         Then I should see "Apple Wiki"
 
