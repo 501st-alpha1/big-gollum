@@ -36,6 +36,8 @@ end
 
 group :test do
   gem 'rspec-rails'
+  gem 'cucumber'
+  gem 'cucumber-rails', :require => false
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl_rails'

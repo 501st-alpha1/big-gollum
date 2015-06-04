@@ -8,7 +8,7 @@
     %ul#wikis
       - @wikis.all.each do |wiki|
         %li
-          = link_to(mounted_wiki_path(wiki: wiki.name), class: "wiki", id: "wiki-%{wiki}" ) do
+          = link_to(mounted_wiki_path(wiki: wiki.name), class: "wiki", id: "wiki-#{wiki}" ) do
             %h3= wiki.name
             %p A description of this wiki
             - wiki.users.each do |user |

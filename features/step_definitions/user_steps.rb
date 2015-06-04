@@ -1,4 +1,5 @@
 Given /^I am logged in as a user$/ do
+  User.destroy_all
   user = User.create(:email => "jack@johnson.com",
                      :password => "12345678",
                      :password_confirmation => "12345678")
