@@ -34,6 +34,13 @@ When /^I go to the list of wikis$/ do
   visit root_path
 end
 
+When /^I edit a wiki called "([^"]*)" and name it "([^"]*)"$/ do |wiki_name,new_name|
+  visit root_path
+  click_on "edit_wiki-#{wiki_name}"
+  fill_in "wiki_name", :with => new_name
+  click_on "Update Wiki"
+end
+
 When /^I delete the "([^"]*)" wiki$/ do |wiki_name|
   click_on "delete_wiki-#{wiki_name}"
 end
