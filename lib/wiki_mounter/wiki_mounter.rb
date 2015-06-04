@@ -45,6 +45,15 @@ class MapGollum
   end
 end
 
+class Precious::App
+  before do
+    session['gollum.author'] = {
+      :name => "%s %s" % [env['warden'].user.first_name, env['warden'].user.last_name],
+      :email => "%s" % env['warden'].user.email,
+    }
+  end
+end
+
 
 # wikis_root = "wikis/"
 # wiki_name = env["action_dispatch.request.path_parameters"][:wiki]
