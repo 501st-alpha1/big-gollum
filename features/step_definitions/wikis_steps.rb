@@ -23,6 +23,8 @@ end
 
 Then /^the "([^"]*)" wiki should have a folder$/ do |wiki_name|
   expect(File.exists?(Rails.root.to_s + '/wikis/' + wiki_name)).to eq(true)
+  expect(File.exists?(Rails.root.to_s + '/wikis/' + wiki_name + '/.git/')).to eq(true)
+  expect(File.exists?(Rails.root.to_s + '/wikis/' + wiki_name + '/Home.md')).to eq(true)
 end
 
 When /^I go to the "([^"]*)" wiki$/ do |wiki_name|
