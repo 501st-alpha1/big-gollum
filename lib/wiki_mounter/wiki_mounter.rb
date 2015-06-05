@@ -20,10 +20,13 @@ class MapGollum
   def initialize(base_path, mount_path)
     @mg = Rack::Builder.new do
 
-      gollum_path = File.expand_path(base_path) # CHANGE THIS TO POINT TO YOUR OWN WIKI REPO
-      wiki_options = {universal_toc: false, live_preview: false}
+      gollum_path = File.expand_path(base_path)
+      wiki_options = { universal_toc: false,
+                       live_preview: false,
+                       template_dir: './lib/wiki_mounter/templates/'
+                     }
       Precious::App.set(:gollum_path, gollum_path)
-      Precious::App.set(:default_markup, :markdown) # set your favorite markup language
+      Precious::App.set(:default_markup, :markdown)
       Precious::App.set(:wiki_options, wiki_options)
 
       map '/' do
