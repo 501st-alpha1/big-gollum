@@ -47,6 +47,14 @@ When /^I edit a wiki called "([^"]*)" and name it "([^"]*)"$/ do |wiki_name,new_
   click_on "Update Wiki"
 end
 
+When /^I visit the "([^"]*)" wiki$/ do |wiki_name|
+  visit "/wiki/" + wiki_name
+end
+
+When(/^I click on the back to all wiki's button$/) do
+  click_on "Back to all wikis"
+end
+
 When /^I delete the "([^"]*)" wiki$/ do |wiki_name|
   click_on "delete_wiki-#{wiki_name}"
 end

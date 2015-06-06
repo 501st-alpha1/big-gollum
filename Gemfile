@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+gem 'gollum'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -24,7 +26,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-
 gem 'devise'
 gem 'grit'
 gem 'bootstrap_form'
@@ -43,6 +44,3 @@ group :test do
   gem 'factory_girl_rails'
   gem 'launchy'
 end
-
-
-gem 'gollum'
