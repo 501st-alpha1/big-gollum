@@ -51,6 +51,16 @@ When /^I visit the "([^"]*)" wiki$/ do |wiki_name|
   visit "/wiki/" + wiki_name
 end
 
+When(/^I edit the wiki page$/) do
+  click_on "Edit"
+  fill_in "gollum-editor-body", :with => "this is a test"
+  click_on "Save"
+end
+
+Then(/^the last edited info should be "([^"]*)"$/) do |name|
+  expect(page).to have_content "Last edited by " + name
+end
+
 When(/^I click on the back to all wiki's button$/) do
   click_on "Back to all wikis"
 end
