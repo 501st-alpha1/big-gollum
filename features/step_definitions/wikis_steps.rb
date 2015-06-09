@@ -66,6 +66,7 @@ When(/^I click on the back to all wiki's button$/) do
 end
 
 When /^I delete the "([^"]*)" wiki$/ do |wiki_name|
+  visit root_path
   click_on "delete_wiki-#{wiki_name}"
 end
 
