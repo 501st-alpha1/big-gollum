@@ -8,3 +8,6 @@ Feature: Users can navigate between gollum wikis
         And I click on the back to all wiki's button
         Then I should see "apple"
         And I should see "Logout"
+
+    # Cleanup
+        Then I delete the "apple" wiki
