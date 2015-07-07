@@ -87,6 +87,7 @@ GEM
       railties (>= 3.0.0)
     gherkin (2.12.2)
       multi_json (~> 1.3)
+    github-markdown (0.6.8)
     github-markup (1.3.3)
     gitlab-grit (2.7.3)
       charlock_holmes (~> 0.6)
@@ -252,6 +253,7 @@ DEPENDENCIES
   database_cleaner
   devise
   factory_girl_rails
+  github-markdown
   gollum
   grit
   haml
