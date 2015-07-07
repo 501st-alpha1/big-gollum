@@ -9,3 +9,6 @@ Feature: Users can edit gollum wikis
         When I edit a wiki called "apple" and name it "pear"
         Then I should see "pear" in the list of wikis
         And I should not see "apple" in the list of wikis
+
+    # Cleanup
+        Then I delete the "pear" wiki

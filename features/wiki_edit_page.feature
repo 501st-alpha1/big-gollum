@@ -9,3 +9,6 @@ Feature: Users can edit pages of wiki
         When I visit the "apple" wiki
         And I edit the wiki page
         Then the last edited info should be "Jack Johnson"
+
+    # Cleanup
+        Then I delete the "apple" wiki

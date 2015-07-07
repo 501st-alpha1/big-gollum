@@ -10,10 +10,16 @@ Feature: Users can create gollum wikis and browse them at their mountpoints
         When I go to the "apple" wiki
         Then I should see "Apple Wiki"
 
+    # Cleanup
+        Then I delete the "apple" wiki
+
     Scenario: User tries to create a wiki that already exists
         When I create a wiki called "apple"
         And I create a wiki called "apple"
         Then I should see "Could not create wiki."
+
+    # Cleanup
+        Then I delete the "apple" wiki
 
     Scenario Outline: Invalid names for a wiki
         When I create a wiki called "<wiki_name>"
