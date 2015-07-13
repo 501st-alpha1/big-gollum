@@ -30,9 +30,11 @@ en:
       title: "Settings"
       edit_settings: "Edit settings"
 
-  users:
+  invite_users:
     index:
       invite_user: "Invite user"
+    new:
+      submit: "Invite user"
 
   wikis:
     form:

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe UsersController do
+describe InviteUsersController do
   let!(:admin) { create(:user, :admin) }
   before { sign_in(admin) }
 
@@ -36,9 +36,36 @@ describe UsersController do
       expect(assigns(:user).new_record?).to eq true
     end
 
-    it 'renders a form for inviting a new user' do
+    it 'renders the new template' do
       get :new
       expect(response).to render_template("new")
+    end
+  end
+
+  describe '#create' do
+    context 'without a valid email' do
+      before { post :create, {user: {email: "derp"}} }
+      it 'rerenders the form' do
+        expect(response).to render_template("new")
+      end
+
+      it 'sets an error flash' do
+        expect(flash[:alert]).to_not be_nil
+      end
+    end
+
+    context 'with a valid email' do
+      before { post :create, {user: {email: "valid@example.com"}} }
+      it 'redirects to the index' do
+      end
+
+      it 'sets a success flash' do
+        expect(flash[:success]).to_not be_nil
+      end
+
+      it 'creates a "invited" user' do
+        expect(User.count).to eq 2
+      end
     end
   end
 end

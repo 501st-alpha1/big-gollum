@@ -14,5 +14,10 @@ feature 'Inviting users' do
     click_button "Log in"
     click_link "Users"
     click_link "Invite user"
+
+    fill_in 'user[email]', with: 'new-user@example.com'
+    click_button "Invite user"
+
+    expect(User.count).to eq 2
   end
 end
