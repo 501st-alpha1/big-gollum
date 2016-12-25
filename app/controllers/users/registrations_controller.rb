@@ -3,14 +3,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
 # before_filter :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    if Setting.find_or_initialize_by(key: 'allow_registrations').value != "1"
+      redirect_to "/users/sign_in", flash: {error: "New sign ups are not allowed."}
+    else
+      super
+    end
+  end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    if Setting.find_or_initialize_by(key: 'allow_registrations').value != "1"
+      redirect_to "/users/sign_in", flash: {error: "New sign ups are not allowed."}
+    else
+      super
+    end
+  end
 
   # GET /resource/edit
   # def edit
