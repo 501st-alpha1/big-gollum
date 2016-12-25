@@ -20,10 +20,12 @@ class SettingsController < ApplicationController
   end
 
   def resource_params
-    params.require(:settings).permit(application_name: [:value])
+    params.require(:settings).permit(application_name: [:value],
+                                     allow_registrations: [:value])
   end
 
   def load_settings
-    [Setting.find_or_initialize_by(key: 'application_name')]
+    [Setting.find_or_initialize_by(key: 'application_name'),
+     Setting.find_or_initialize_by(key: 'allow_registrations')]
   end
 end
