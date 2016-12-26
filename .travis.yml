@@ -1,0 +1,8 @@
+language: ruby
+install:
+  - bundle
+script:
+  - cucumber
+branches:
+  only:
+    - master
