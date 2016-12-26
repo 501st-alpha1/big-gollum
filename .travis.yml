@@ -2,6 +2,8 @@ language: ruby
 install:
   - bundle
   - bundle exec rake db:migrate RAILS_ENV=test
+  - git config --global user.name "Example User"
+  - git config --global user.email "user@example.com"
 script:
   - cucumber
 branches:
