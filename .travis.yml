@@ -1,6 +1,7 @@
 language: ruby
 install:
   - bundle
+  - bundle exec rake db:migrate RAILS_ENV=test
 script:
   - cucumber
 branches:
