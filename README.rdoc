@@ -1,5 +1,6 @@
 == Big Gollum
 
+{<img src="https://travis-ci.org/oponder/big-gollum.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/oponder/big-gollum]
 {<img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/oponder/big-gollum">}[https://gitter.im/oponder/big-gollum?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge]
 
 Create, destroy, and manage permissions to multiple gollum wiki's
