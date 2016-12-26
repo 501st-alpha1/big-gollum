@@ -31,6 +31,8 @@ weird characters) and then you will be able to click on your wiki and browse/edi
 
 You can then click on add wiki, give it a name (No spaces or weird characters) and then you will be able to click on your wiki and browse/edit it.
 
+To enable new registrations, set the +allow_registrations+ setting to +1+. With this setting disabled, new users will not be permitted to create an account.
+
 == Contributors / Thanks
 
 Scott Weldon (501st-alpha1)
